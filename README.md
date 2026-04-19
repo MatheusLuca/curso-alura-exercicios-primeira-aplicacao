@@ -11,8 +11,12 @@ Este projeto apresenta os primeiros conceitos da linguagem Java, incluindo:
 - cálculo de média;
 - concatenação de textos;
 - uso de **Text Blocks** (recurso do Java 15+).
+- conversão de temperatura (Celsius para Fahrenheit).
 
-Atualmente, o código principal está em `src/Main.java`.
+Atualmente, o projeto possui duas classes de estudo:
+
+- `src/Main.java`: prática de saída no console, variáveis, média e text block;
+- `src/Exercicio1.java`: exercício de conversão de temperatura.
 
 ## Tecnologias
 
@@ -24,7 +28,8 @@ Atualmente, o código principal está em `src/Main.java`.
 ```text
 java-alura-criando-primeiro-programa/
 ├─ src/
-│  └─ Main.java
+│  ├─ Main.java
+│  └─ Exercicio1.java
 └─ README.md
 ```
 
@@ -41,13 +46,25 @@ java-alura-criando-primeiro-programa/
 No diretório raiz do projeto, execute:
 
 ```powershell
-javac -d out src/Main.java
+javac -d out src/Main.java src/Exercicio1.java
+```
+
+Para rodar o exemplo principal:
+
+```powershell
 java -cp out Main
+```
+
+Para rodar o exercício de conversão:
+
+```powershell
+java -cp out Exercicio1
 ```
 
 ## Saída esperada (resumo)
 
-O programa exibe no console informações de um filme (Top Gun: Maverick), incluindo ano de lançamento, média de notas e uma sinopse formatada.
+- `Main`: exibe informações de um filme (Top Gun: Maverick), ano de lançamento, média e sinopse formatada.
+- `Exercicio1`: calcula e imprime a temperatura em Fahrenheit a partir de um valor em Celsius.
 
 ## Objetivo de aprendizado
 
