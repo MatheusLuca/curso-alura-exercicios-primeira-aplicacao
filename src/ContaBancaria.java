@@ -46,6 +46,7 @@ public class ContaBancaria {
                         saldoCliente = sacar(sacar, saldoCliente);
                         System.out.println("Saldo atualizado após saque: " + saldoCliente);
                     case 4:
+
                         opcaoCliente = 4;
                 }
         }
