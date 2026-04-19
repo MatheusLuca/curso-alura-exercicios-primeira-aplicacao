@@ -44,11 +44,10 @@ public class ContaBancaria {
                         System.out.println("Digite quanto quer sacar: ");
                         double sacar = sc.nextDouble();
                         saldoCliente = sacar(sacar, saldoCliente);
+                        System.out.println("Saldo atualizado após saque: " + saldoCliente);
                     case 4:
                         opcaoCliente = 4;
                 }
-
-
         }
     }
 
