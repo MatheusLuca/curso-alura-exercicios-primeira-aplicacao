@@ -13,7 +13,8 @@ Este repositório reúne exercícios e exemplos que cobrem:
 - conversão de temperatura (Celsius → Fahrenheit);
 - estruturas condicionais (`if` / `else`);
 - menu interativo com `switch` e leitura do teclado (`Scanner`);
-- laço `while`, números aleatórios (`Random`) e jogo de adivinhação.
+- laço `while`, números aleatórios (`Random`) e jogo de adivinhação;
+- simulação de **conta bancária**: cadastro inicial, menu em loop, métodos estáticos para depósito e saque.
 
 ## Classes em `src/`
 
@@ -24,6 +25,7 @@ Este repositório reúne exercícios e exemplos que cobrem:
 | `Condicional.java` | Condicionais: ano de lançamento e liberação do filme conforme plano. |
 | `Desafios.java` | Menu numérico com 6 mini-exercícios (média, casting, `char`/`String`, preço × quantidade, dólar → real, desconto). |
 | `JogoAdivinhacao.java` | Jogo: adivinhar um número entre 0 e 99 com até 5 tentativas. |
+| `ContaBancaria.java` | Cadastro (nome, tipo de conta, saldo inicial) e menu interativo: consultar saldo, depositar, sacar ou sair. |
 
 ## Tecnologias
 
@@ -39,7 +41,8 @@ java-alura-criando-primeiro-programa/
 │  ├─ Exercicio1.java
 │  ├─ Condicional.java
 │  ├─ Desafios.java
-│  └─ JogoAdivinhacao.java
+│  ├─ JogoAdivinhacao.java
+│  └─ ContaBancaria.java
 ├─ README.md
 └─ java-alura-criando-primeiro-programa.iml
 ```
@@ -49,7 +52,7 @@ java-alura-criando-primeiro-programa/
 ### Opção 1: IntelliJ IDEA
 
 1. Abra a pasta do projeto no IntelliJ.
-2. Abra a classe que deseja rodar (`Main`, `Exercicio1`, `Condicional`, `Desafios` ou `JogoAdivinhacao`).
+2. Abra a classe que deseja rodar (`Main`, `Exercicio1`, `Condicional`, `Desafios`, `JogoAdivinhacao` ou `ContaBancaria`).
 3. Execute o método `main` (ícone de play ao lado da classe ou do método).
 
 ### Opção 2: Terminal (Windows PowerShell)
@@ -57,7 +60,7 @@ java-alura-criando-primeiro-programa/
 No diretório raiz do projeto, compile todas as classes:
 
 ```powershell
-javac -d out src/Main.java src/Exercicio1.java src/Condicional.java src/Desafios.java src/JogoAdivinhacao.java
+javac -d out src/Main.java src/Exercicio1.java src/Condicional.java src/Desafios.java src/JogoAdivinhacao.java src/ContaBancaria.java
 ```
 
 Execute informando o **nome da classe** (sem `.java`):
@@ -68,9 +71,10 @@ java -cp out Exercicio1
 java -cp out Condicional
 java -cp out Desafios
 java -cp out JogoAdivinhacao
+java -cp out ContaBancaria
 ```
 
-`Desafios` e `JogoAdivinhacao` pedem entrada pelo teclado após iniciar.
+`Desafios`, `JogoAdivinhacao` e `ContaBancaria` pedem entrada pelo teclado após iniciar.
 
 **Observação:** é necessário ter o JDK instalado e `javac`/`java` disponíveis no `PATH` do sistema.
 
@@ -81,6 +85,7 @@ java -cp out JogoAdivinhacao
 - **Condicional**: mensagens sobre filme “retro” ou lançamento e sobre liberação ou cobrança conforme regras do plano.
 - **Desafios**: menu; conforme o número escolhido (1–6), um dos mini-exercícios é executado (parte deles usa valores fixos no código).
 - **JogoAdivinhacao**: mensagens pedindo número e indicando se o palpite é maior ou menor, até acertar ou esgotar tentativas.
+- **ContaBancaria**: bloco com nome, tipo de conta e saldo; em seguida menu repetido até escolher sair, com consulta, depósito e saque.
 
 ## Objetivo de aprendizado
 
