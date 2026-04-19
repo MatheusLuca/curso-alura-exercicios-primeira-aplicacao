@@ -4,24 +4,31 @@ Projeto introdutório em Java desenvolvido durante os estudos na Alura.
 
 ## Sobre o projeto
 
-Este projeto apresenta os primeiros conceitos da linguagem Java, incluindo:
+Este repositório reúne exercícios e exemplos que cobrem:
 
-- impressão de mensagens no console;
-- declaração e uso de variáveis (`int`, `boolean`, `double`, `String`);
-- cálculo de média;
-- concatenação de textos;
-- uso de **Text Blocks** (recurso do Java 15+).
-- conversão de temperatura (Celsius para Fahrenheit).
+- saída no console e formatação (`printf`);
+- variáveis (`int`, `boolean`, `double`, `String`, `char`);
+- cálculo de média e operações numéricas;
+- **Text Blocks** (Java 15+);
+- conversão de temperatura (Celsius → Fahrenheit);
+- estruturas condicionais (`if` / `else`);
+- menu interativo com `switch` e leitura do teclado (`Scanner`);
+- laço `while`, números aleatórios (`Random`) e jogo de adivinhação.
 
-Atualmente, o projeto possui duas classes de estudo:
+## Classes em `src/`
 
-- `src/Main.java`: prática de saída no console, variáveis, média e text block;
-- `src/Exercicio1.java`: exercício de conversão de temperatura.
+| Arquivo | Descrição |
+|--------|-----------|
+| `Main.java` | Exemplo “Screen Match”: filme, ano, média de notas e sinopse com text block. |
+| `Exercicio1.java` | Conversão de temperatura de Celsius para Fahrenheit. |
+| `Condicional.java` | Condicionais: ano de lançamento e liberação do filme conforme plano. |
+| `Desafios.java` | Menu numérico com 6 mini-exercícios (média, casting, `char`/`String`, preço × quantidade, dólar → real, desconto). |
+| `JogoAdivinhacao.java` | Jogo: adivinhar um número entre 0 e 99 com até 5 tentativas. |
 
 ## Tecnologias
 
-- Java 17+ (recomendado)
-- IntelliJ IDEA (opcional, mas usado no projeto)
+- Java 17+ (recomendado; text blocks exigem Java 15+)
+- IntelliJ IDEA (projeto já configurado com `.idea/` e `.iml`)
 
 ## Estrutura do projeto
 
@@ -29,8 +36,12 @@ Atualmente, o projeto possui duas classes de estudo:
 java-alura-criando-primeiro-programa/
 ├─ src/
 │  ├─ Main.java
-│  └─ Exercicio1.java
-└─ README.md
+│  ├─ Exercicio1.java
+│  ├─ Condicional.java
+│  ├─ Desafios.java
+│  └─ JogoAdivinhacao.java
+├─ README.md
+└─ java-alura-criando-primeiro-programa.iml
 ```
 
 ## Como executar
@@ -38,34 +49,39 @@ java-alura-criando-primeiro-programa/
 ### Opção 1: IntelliJ IDEA
 
 1. Abra a pasta do projeto no IntelliJ.
-2. Localize a classe `Main`.
-3. Execute o método `main`.
+2. Abra a classe que deseja rodar (`Main`, `Exercicio1`, `Condicional`, `Desafios` ou `JogoAdivinhacao`).
+3. Execute o método `main` (ícone de play ao lado da classe ou do método).
 
 ### Opção 2: Terminal (Windows PowerShell)
 
-No diretório raiz do projeto, execute:
+No diretório raiz do projeto, compile todas as classes:
 
 ```powershell
-javac -d out src/Main.java src/Exercicio1.java
+javac -d out src/Main.java src/Exercicio1.java src/Condicional.java src/Desafios.java src/JogoAdivinhacao.java
 ```
 
-Para rodar o exemplo principal:
+Execute informando o **nome da classe** (sem `.java`):
 
 ```powershell
 java -cp out Main
-```
-
-Para rodar o exercício de conversão:
-
-```powershell
 java -cp out Exercicio1
+java -cp out Condicional
+java -cp out Desafios
+java -cp out JogoAdivinhacao
 ```
+
+`Desafios` e `JogoAdivinhacao` pedem entrada pelo teclado após iniciar.
+
+**Observação:** é necessário ter o JDK instalado e `javac`/`java` disponíveis no `PATH` do sistema.
 
 ## Saída esperada (resumo)
 
-- `Main`: exibe informações de um filme (Top Gun: Maverick), ano de lançamento, média e sinopse formatada.
-- `Exercicio1`: calcula e imprime a temperatura em Fahrenheit a partir de um valor em Celsius.
+- **Main**: mensagens sobre o filme Top Gun: Maverick, média e sinopse em bloco de texto.
+- **Exercicio1**: um número (Fahrenheit) correspondente à conversão do Celsius definido no código.
+- **Condicional**: mensagens sobre filme “retro” ou lançamento e sobre liberação ou cobrança conforme regras do plano.
+- **Desafios**: menu; conforme o número escolhido (1–6), um dos mini-exercícios é executado (parte deles usa valores fixos no código).
+- **JogoAdivinhacao**: mensagens pedindo número e indicando se o palpite é maior ou menor, até acertar ou esgotar tentativas.
 
 ## Objetivo de aprendizado
 
-Praticar a base da linguagem Java para evoluir para projetos mais completos com orientação a objetos e organização de código.
+Consolidar a base da linguagem Java (tipos, entrada/saída, condicionais, laços e bibliotecas simples) como preparação para orientação a objetos e projetos maiores.
